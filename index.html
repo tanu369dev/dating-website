@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spark — Find your person</title>
+  <meta name="description" content="Spark is a modern dating experience: swipe cards, instant chat, compatibility scores and more." />
+  <meta name="theme-color" content="#ff4d79" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <div id="floaters"></div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= LANDING ================= -->
+  <div id="landing">
+    <header class="nav">
+      <a class="logo" href="#top"><svg viewBox="0 0 32 32" width="28" height="28"><use href="#heart"/></svg> Spark</a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#stories">Stories</a>
+        <a href="#premium">Premium</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" data-action="theme" aria-label="Toggle theme">◐</button>
+        <button class="btn btn-primary" data-action="launch">Start swiping</button>
+      </div>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <span class="pill reveal">✨ 2M+ matches made this year</span>
+        <h1 class="reveal">Love shouldn’t be <em>left on read.</em></h1>
+        <p class="reveal">Swipe, match, and talk — with real people, verified profiles and conversation starters that actually spark something.</p>
+        <div class="hero-cta reveal">
+          <button class="btn btn-primary btn-lg" data-action="launch">Find my match →</button>
+          <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+        </div>
+        <div class="stats reveal">
+          <div><b data-count="2400000">0</b><span>Members</span></div>
+          <div><b data-count="98">0</b><span>% Verified</span></div>
+          <div><b data-count="4.8" data-dec="1">0</b><span>App rating</span></div>
+        </div>
+      </div>
+      <div class="hero-stage" aria-hidden="true">
+        <div class="hcard hc1"><img alt="" src="https://randomuser.me/api/portraits/women/68.jpg" /><div><b>Aanya, 26</b><small>Mumbai · Designer</small></div></div>
+        <div class="hcard hc2"><img alt="" src="https://randomuser.me/api/portraits/men/32.jpg" /><div><b>Kabir, 28</b><small>Pune · Chef</small></div></div>
+        <div class="hcard hc3"><img alt="" src="https://randomuser.me/api/portraits/women/44.jpg" /><div><b>Meera, 25</b><small>Delhi · Writer</small></div></div>
+        <div class="chip c1">💘 It’s a match!</div>
+        <div class="chip c2">🔥 92% compatible</div>
+        <div class="chip c3">💬 “Hey you 👋”</div>
+      </div>
+    </section>
+
+    <div class="marquee"><div class="track">
+      <span>🎵 Music lovers</span><span>✈️ Travellers</span><span>🍜 Foodies</span><span>🎮 Gamers</span><span>📚 Bookworms</span><span>🧘 Yogis</span><span>🎬 Cinephiles</span><span>🐶 Dog people</span><span>🏍️ Riders</span><span>🎨 Creators</span>
+      <span>🎵 Music lovers</span><span>✈️ Travellers</span><span>🍜 Foodies</span><span>🎮 Gamers</span><span>📚 Bookworms</span><span>🧘 Yogis</span><span>🎬 Cinephiles</span><span>🐶 Dog people</span><span>🏍️ Riders</span><span>🎨 Creators</span>
+    </div></div>
+
+    <section id="features" class="section">
+      <h2 class="reveal">Everything you’d want in a dating app</h2>
+      <p class="sub reveal">Borrowed from the best, polished into one place.</p>
+      <div class="grid">
+        <article class="feat reveal"><i>🃏</i><h3>Swipe cards</h3><p>Drag, flick or tap. Smooth physics-based card stack with Like, Nope and Super Like.</p></article>
+        <article class="feat reveal"><i>⭐</i><h3>Super Like</h3><p>Stand out instantly. A Super Like is a guaranteed way to get noticed.</p></article>
+        <article class="feat reveal"><i>↩️</i><h3>Rewind</h3><p>Swiped the wrong way? Undo your last swipe in a tap.</p></article>
+        <article class="feat reveal"><i>📊</i><h3>Compatibility score</h3><p>See how much you share before you even say hi — based on interests.</p></article>
+        <article class="feat reveal"><i>💬</i><h3>Instant chat</h3><p>Message matches with icebreaker prompts, typing indicators and emoji.</p></article>
+        <article class="feat reveal"><i>🎯</i><h3>Smart filters</h3><p>Filter by age, distance, who you’re looking for and shared interests.</p></article>
+        <article class="feat reveal"><i>✅</i><h3>Verified badges</h3><p>Photo-verified profiles keep catfish out and trust high.</p></article>
+        <article class="feat reveal"><i>🚀</i><h3>Boost</h3><p>Be the top profile in your area for 30 minutes.</p></article>
+        <article class="feat reveal"><i>🌙</i><h3>Light &amp; dark</h3><p>Beautiful in both. Switch any time, we remember it.</p></article>
+      </div>
+    </section>
+
+    <section id="how" class="section alt">
+      <h2 class="reveal">Three steps to a spark</h2>
+      <div class="steps">
+        <div class="step reveal"><span>1</span><h3>Create your vibe</h3><p>Pick your interests and a few prompts. No essays needed.</p></div>
+        <div class="step reveal"><span>2</span><h3>Swipe &amp; match</h3><p>Like someone who likes you back and it’s a match.</p></div>
+        <div class="step reveal"><span>3</span><h3>Start talking</h3><p>Break the ice with a suggested opener and plan a real date.</p></div>
+      </div>
+    </section>
+
+    <section id="stories" class="section">
+      <h2 class="reveal">Real stories</h2>
+      <div class="grid g2">
+        <blockquote class="quote reveal"><img alt="" src="https://randomuser.me/api/portraits/women/12.jpg" /><p>“We matched over a shared love of filter coffee. Six months later, we’re still arguing about who’s better at it.”</p><cite>— Riya &amp; Dev</cite></blockquote>
+        <blockquote class="quote reveal"><img alt="" src="https://randomuser.me/api/portraits/men/75.jpg" /><p>“The icebreakers saved me. I’m terrible at first messages, and now I’m planning a trip to Goa.”</p><cite>— Arjun &amp; Sana</cite></blockquote>
+      </div>
+    </section>
+
+    <section id="premium" class="section alt">
+      <h2 class="reveal">Go Premium</h2>
+      <div class="plans">
+        <div class="plan reveal"><h3>Free</h3><div class="price">₹0</div><ul><li>10 likes a day</li><li>Basic filters</li><li>Unlimited chat</li></ul><button class="btn btn-ghost" data-action="launch">Start free</button></div>
+        <div class="plan hot reveal"><span class="tag">Most popular</span><h3>Gold</h3><div class="price">₹499<small>/mo</small></div><ul><li>Unlimited likes</li><li>Unlimited Rewind</li><li>5 Super Likes a week</li><li>See who likes you</li><li>Weekly Boost</li></ul><button class="btn btn-primary" data-action="gold">Get Gold</button></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 class="reveal">Your next story starts with a swipe.</h2>
+      <button class="btn btn-primary btn-lg reveal" data-action="launch">Join Spark free</button>
+    </section>
+
+    <footer class="footer">
+      <span class="logo"><svg viewBox="0 0 32 32" width="22" height="22"><use href="#heart"/></svg> Spark</span>
+      <span>© <span id="year"></span> Spark. Demo project — all profiles are fictional.</span>
+    </footer>
+  </div>
+
+  <!-- ================= APP ================= -->
+  <div id="app" hidden>
+    <header class="app-top">
+      <button class="logo linklike" data-action="home"><svg viewBox="0 0 32 32" width="26" height="26"><use href="#heart"/></svg> Spark</button>
+      <div class="meter" title="Likes left today">❤️ <b id="likesLeft">10</b> likes left</div>
+      <div class="nav-actions">
+        <button class="icon-btn" data-action="boost" title="Boost">🚀</button>
+        <button class="icon-btn" data-action="filters" title="Filters">⚙️</button>
+        <button class="icon-btn" data-action="theme" aria-label="Toggle theme">◐</button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="tab active" id="tab-discover">
+        <div class="deck-wrap">
+          <div class="deck" id="deck"></div>
+          <div class="empty" id="empty" hidden>
+            <div class="radar"><span></span><span></span><span></span></div>
+            <h3>You’re all caught up</h3>
+            <p>Widen your filters or check back soon.</p>
+            <button class="btn btn-primary" data-action="reset">Refresh profiles</button>
+          </div>
+          <div class="actions" id="actions">
+            <button class="act rewind" data-swipe="undo" title="Rewind (Z)">↩</button>
+            <button class="act nope" data-swipe="left" title="Nope (←)">✕</button>
+            <button class="act star" data-swipe="super" title="Super Like (↑)">★</button>
+            <button class="act like" data-swipe="right" title="Like (→)">♥</button>
+            <button class="act info" data-swipe="info" title="Profile (I)">i</button>
+          </div>
+          <p class="hint">Drag cards · ← → ↑ keys also work</p>
+        </div>
+      </section>
+
+      <section class="tab" id="tab-matches">
+        <h2>Your matches</h2>
+        <div class="match-row" id="matchRow"></div>
+        <h2>Who liked you <span class="gold-badge">Gold</span></h2>
+        <div class="liked-grid" id="likedGrid"></div>
+      </section>
+
+      <section class="tab" id="tab-chats">
+        <h2>Messages</h2>
+        <div class="chat-list" id="chatList"></div>
+      </section>
+
+      <section class="tab" id="tab-profile">
+        <h2>My profile</h2>
+        <div class="me-card">
+          <img id="meImg" alt="" src="https://randomuser.me/api/portraits/lego/3.jpg" />
+          <div class="me-fields">
+            <label>Name<input id="meName" type="text" maxlength="24" /></label>
+            <label>Bio<textarea id="meBio" rows="3" maxlength="140"></textarea></label>
+            <label>My interests <small>(tap to toggle)</small></label>
+            <div class="tags" id="meTags"></div>
+            <button class="btn btn-primary" id="saveMe">Save profile</button>
+          </div>
+        </div>
+        <div class="me-stats"><div><b id="sLikes">0</b><span>Likes sent</span></div><div><b id="sMatches">0</b><span>Matches</span></div><div><b id="sSupers">0</b><span>Super Likes</span></div></div>
+        <button class="btn btn-ghost" data-action="resetAll">Reset demo data</button>
+      </section>
+    </main>
+
+    <nav class="tabbar">
+      <button class="tabbtn active" data-tab="discover"><span>🔥</span>Discover</button>
+      <button class="tabbtn" data-tab="matches"><span>💞</span>Matches</button>
+      <button class="tabbtn" data-tab="chats"><span>💬</span>Chats<i id="unread" hidden>0</i></button>
+      <button class="tabbtn" data-tab="profile"><span>👤</span>Me</button>
+    </nav>
+  </div>
+
+  <!-- ================= MODALS ================= -->
+  <div class="modal" id="mMatch" hidden>
+    <div class="sheet match">
+      <canvas id="confetti"></canvas>
+      <h2>It’s a match!</h2>
+      <p id="matchText"></p>
+      <div class="pair"><img id="mImgMe" alt="" /><img id="mImgThem" alt="" /></div>
+      <button class="btn btn-primary btn-lg" id="mSay">Say hello 👋</button>
+      <button class="btn btn-ghost" data-close>Keep swiping</button>
+    </div>
+  </div>
+
+  <div class="modal" id="mProfile" hidden>
+    <div class="sheet profile" id="profileBody"></div>
+  </div>
+
+  <div class="modal" id="mFilters" hidden>
+    <div class="sheet">
+      <h3>Filters</h3>
+      <label>Show me
+        <select id="fShow"><option value="all">Everyone</option><option value="women">Women</option><option value="men">Men</option></select>
+      </label>
+      <label>Age: up to <b id="fAgeV">40</b>
+        <input type="range" id="fAge" min="18" max="45" value="40" />
+      </label>
+      <label>Distance: within <b id="fDistV">50</b> km
+        <input type="range" id="fDist" min="1" max="100" value="50" />
+      </label>
+      <label>Interest
+        <select id="fInt"><option value="">Any</option></select>
+      </label>
+      <label class="check"><input type="checkbox" id="fVer" /> Verified profiles only</label>
+      <div class="row"><button class="btn btn-ghost" id="fClear">Clear</button><button class="btn btn-primary" id="fApply">Apply</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="mPremium" hidden>
+    <div class="sheet center">
+      <div class="big">👑</div>
+      <h3 id="pTitle">Get Spark Gold</h3>
+      <p id="pText">Unlimited likes, Rewind, weekly Super Likes and more.</p>
+      <button class="btn btn-primary btn-lg" id="pGo">Try Gold free (demo)</button>
+      <button class="btn btn-ghost" data-close>Maybe later</button>
+    </div>
+  </div>
+
+  <div class="modal" id="mChat" hidden>
+    <div class="sheet chat">
+      <div class="chat-head"><button class="icon-btn" data-close aria-label="Back">←</button><img id="cImg" alt="" /><div><b id="cName"></b><small id="cStatus">Online</small></div></div>
+      <div class="msgs" id="msgs"></div>
+      <div class="ice" id="ice"></div>
+      <form class="composer" id="composer"><input id="cInput" placeholder="Type a message…" autocomplete="off" /><button class="btn btn-primary" type="submit">Send</button></form>
+    </div>
+  </div>
+
+  <!-- shared heart symbol -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a59"/><stop offset="1" stop-color="#ff2d78"/></linearGradient>
+      <symbol id="heart" viewBox="0 0 32 32"><path fill="url(#hg)" d="M16 28S3 20 3 11.5C3 7.4 6.100 5 9.300 5c2.700 0 4.800 1.600 6.700 4 1.900-2.400 4-4 6.700-4C25.900 5 29 7.400 29 11.500 29 20 16 28 16 28z"/></symbol>
+    </defs>
+  </svg>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
